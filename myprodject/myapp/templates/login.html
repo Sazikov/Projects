@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+<style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+</style>
+
+</head>
+<body>
+<form method="post">
+    <h2>Вход</h2> 
+    <div class="err-text">{{errtxt}}</div> 
+    {% csrf_token %}
+    <p>{{ form.username.label_tag }}{{ form.username }}</p>
+    <p>{{ form.password.label_tag }}{{ form.password }}</p>
+    </div>
+    <p ><button type="submit">Войти</button></p>
+</form>
+</body>
+</html>

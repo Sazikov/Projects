@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр анкеты</title>
+<style>
+
+
+</style>
+</head>
+
+
+<body>
+<h3>Просмотр анкеты № {{ nom_ank }}</h3>
+<p>Фамилия: {{ user_surname }}</p>
+<p>Имя: {{ user_name }}</p>
+<p>Отчество: {{ user_name2 }}</p>
+<p>Дата рождения: {{ date_birth }}</p>
+<p>Дополнительная информация: {{ comment }}</p>
+<p></p>
+<form action="" method="post" autocomplete="off">
+{% csrf_token %}
+    <button type="submit">Удалить анкету</button>
+</form>
+</body>
+</html>

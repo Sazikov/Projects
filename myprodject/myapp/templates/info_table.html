@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Инфомация о пользователях</title>
+<style>
+h3 {
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #CCC;
+}
+
+td, th {
+    padding: 10px;
+}
+
+
+</style>
+</head>
+
+
+<body>
+<h3>Инфомация о пользователях</h3>
+{% if users_info_table %}
+<table border="">
+    <thead>
+        <tr>
+            <th>Фамилия, имя отчество</th>
+            <th width="20%">Год рождения</th>
+        </tr>
+      </thead>
+    <tbody>
+    {% for line in users_info_table %}
+    <tr>
+        <td>
+            <a href="{{ line.0 }}" target="_blank" title="Просмотреть/удалить информацию">{{ line.1 }}</a>
+        </td>
+        <td>{{ line.2 }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h3>Список пуст</h3>
+{% endif %}
+
+
+
+
+
+
+</form>
+</body>
+</html>
