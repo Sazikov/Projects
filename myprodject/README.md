@@ -1,4 +1,4 @@
-# README
+# Django project
 
 ## Описание проекта
 
